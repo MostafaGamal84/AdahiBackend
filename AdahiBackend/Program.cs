@@ -11,9 +11,7 @@ if (string.IsNullOrWhiteSpace(connectionString))
     throw new InvalidOperationException("DefaultConnection is not configured.");
 }
 
-builder.Services.AddScoped(_ => new SqlConnection(connectionString));
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped(_ => new SqlConnection(connectionString)); builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
