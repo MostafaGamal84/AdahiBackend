@@ -1,0 +1,6 @@
+@AdahiBackend_HostAddress = http://localhost:5150
+
+GET {{AdahiBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
